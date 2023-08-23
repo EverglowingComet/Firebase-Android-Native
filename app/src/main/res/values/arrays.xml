@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pick_image">
+        <item>@string/pick_gallery</item>
+        <item>@string/pick_camera</item>
+    </string-array>
+    <string-array name="gallery_action">
+        <item>@string/edit_gallery</item>
+        <item>@string/open_details</item>
+    </string-array>
+</resources>

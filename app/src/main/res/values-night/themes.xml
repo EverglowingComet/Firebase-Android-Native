@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DeliveryAsap" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryDark">@color/purple_700</item>
+        <item name="colorAccent">@color/teal_200</item>
+        <!-- Customize your theme here. -->
+        <item name="defaultInfoSize">@dimen/_12sdp</item>
+
+        <item name="defaultBackgroundColor">@color/white</item>
+        <item name="defaultMainBackground">@color/white</item>
+        <item name="defaultActionBarBackground">@color/white</item>
+        <item name="defaultContentBackground">@color/white_light</item>
+        <item name="defaultNavBackground">@color/white_two</item>
+        <item name="defaultOverlayBackground">@color/colorSemiTransparent</item>
+        <item name="defaultMainGradientDarkColor">@color/l_blue_dark</item>
+        <item name="defaultMainGradientLightColor">@color/l_blue_light</item>
+        <item name="defaultDarkGradientDarkColor">@color/blue_dark</item>
+        <item name="defaultDarkGradientLightColor">@color/blue_light</item>
+        <item name="defaultInfoHighLightColor">@color/black</item>
+        <item name="defaultInfoAccentColor">@color/colorAccent</item>
+        <item name="defaultInfoIconBackgroundColor">@color/info_icon_bg_color</item>
+        <item name="defaultSemiTransparentColor">@color/colorSemiTransparent</item>
+        <item name="defaultCheckBackgroundColor">@color/l_green_light</item>
+        <item name="defaultInfoColor">@color/main_info_color</item>
+        <item name="defaultSecInfoColor">@color/secondary_info_color</item>
+        <item name="defaultTitleColor">@color/title_color</item>
+        <item name="defaultStrokeColor">@color/grey_three</item>
+        <item name="defaultActionBackground">@color/red</item>
+        <item name="defaultActionTitleColor">@color/white</item>
+        <item name="inverseBackgroundColor">@color/black</item>
+        <item name="inverseInfoColor">@color/colorLight</item>
+        <item name="inverseTitleColor">@color/white</item>
+    </style>
+</resources>
