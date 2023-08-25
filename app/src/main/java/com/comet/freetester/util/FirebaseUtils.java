@@ -1,7 +1,5 @@
 package com.comet.freetester.util;
 
-import com.comet.freetester.data.Item;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 

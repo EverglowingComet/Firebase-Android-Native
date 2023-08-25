@@ -5,7 +5,6 @@ import android.net.Uri;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.comet.freetester.data.Delivery;
 import com.comet.freetester.data.GalleryItem;
 import com.comet.freetester.data.User;
 import com.comet.freetester.util.Utils;
@@ -30,7 +29,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DeliveryDataModel {
-    public ArrayList<Delivery> deliveryList = new ArrayList<>();
     public ArrayList<User> userList = new ArrayList<>();
     public ArrayList<GalleryItem> galleryList = new ArrayList<>();
 
@@ -173,39 +171,6 @@ public class DeliveryDataModel {
         });
     }
 
-    public void deliveryQuery(FirebaseDatabaseListener listener) {
-        Map<String, Object> data = new HashMap<>();
-
-        functions.getHttpsCallable("delivery-deliveryQuery").call(data).addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                HttpsCallableResult result = task.getResult();
-                HashMap<String, Object> data1 = Utils.getDataMap(result);
-
-                boolean success = Utils.checkSuccess(data1);
-                if (!success) {
-                    listener.onFailure(null);
-                    return;
-                }
-
-                deliveryList = new ArrayList<>();
-                HashMap<String, Object> map = Utils.getDataMapForKey(data1, "deliveries");
-                if (map != null) {
-                    for (String id : map.keySet()) {
-                        HashMap<String, Object> item = Utils.getDataMapForKey(map, id);
-                        deliveryList.add(Delivery.fromMap(item));
-                    }
-                }
-
-                listener.onSuccess();
-            } else {
-                Exception exception = task.getException();
-                if (exception != null) exception.printStackTrace();
-                listener.onFailure(null);
-            }
-
-        });
-    }
-
     public void galleryQuery(FirebaseDatabaseListener listener) {
         Map<String, Object> data = new HashMap<>();
 
@@ -281,15 +246,6 @@ public class DeliveryDataModel {
 
     }
 
-    public @Nullable Delivery getDelivery(@Nullable String id) {
-        for (Delivery item : deliveryList) {
-            if (id != null && id.equals(item.id)) {
-                return item;
-            }
-        }
-        return null;
-    }
-
     public @Nullable GalleryItem getGalleryItem(@Nullable String id) {
         for (GalleryItem item : galleryList) {
             if (id != null && id.equals(item.id)) {
@@ -306,26 +262,6 @@ public class DeliveryDataModel {
             }
         }
         return null;
-    }
-
-    public void submitDeliveryPhoto(Delivery delivery, Uri uri, FirebaseDatabaseListener listener) {
-        Map<String, Object> data = new HashMap<>();
-        data.put("deliveryId", delivery.id);
-        data.put("deliveryPhotoUri", uri.toString());
-
-        functions.getHttpsCallable("delivery-submitDeliveryPhoto").call(data).addOnCompleteListener(task -> {
-            if (task.isSuccessful()) {
-                HttpsCallableResult result = task.getResult();
-                delivery.deliveryPhotoUri = uri.toString();
-                delivery.delivered = true;
-                listener.onSuccess();
-            } else {
-                Exception exception = task.getException();
-                if (exception != null) exception.printStackTrace();
-                listener.onFailure(null);
-            }
-
-        });
     }
 
     public void submitGallery(GalleryItem galleryItem, FirebaseDatabaseListener listener) {

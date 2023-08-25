@@ -49,12 +49,6 @@
             android:value="AIzaSyDLBIfgT5OxnOIlfCal2i-6lsPK9XcFKPY" />
 
         <activity
-            android:name=".ui.DeliveryDetails"
-            android:exported="false" />
-        <activity
-            android:name=".ui.TodayDelivery"
-            android:exported="false" />
-        <activity
             android:name="com.canhub.cropper.CropImageActivity"
             android:theme="@style/Theme.CropActivity" />
     </application>
