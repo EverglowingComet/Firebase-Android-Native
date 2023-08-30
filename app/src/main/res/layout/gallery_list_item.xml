@@ -30,7 +30,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_64sdp"
                 android:layout_marginBottom="@dimen/_4sdp"
-                style="@style/Theme.DeliveryAsap.RoundedRectIconStyle"
+                style="@style/Theme.FirebaseNative.RoundedRectIconStyle"
                 app:riv_corner_radius="@dimen/_8sdp"
                 android:src="@drawable/club_plan_default" />
 
@@ -54,7 +54,7 @@
                     android:id="@+id/user_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/Theme.DeliveryAsap.InfoTextStyle"
+                    style="@style/Theme.FirebaseNative.InfoTextStyle"
                     tools:text="Store Location ...." />
             </LinearLayout>
             <LinearLayout
@@ -71,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginEnd="@dimen/_12sdp"
-                    style="@style/Theme.DeliveryAsap.SubInfoTextStyle"
+                    style="@style/Theme.FirebaseNative.SubInfoTextStyle"
                     android:textStyle="bold"
                     tools:text="Soccer Photo" />
 
@@ -80,7 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/_8sdp"
-                    style="@style/Theme.DeliveryAsap.SubInfoTextStyle"
+                    style="@style/Theme.FirebaseNative.SubInfoTextStyle"
                     tools:text="2023/3/25 11:00 am" />
 
             </LinearLayout>

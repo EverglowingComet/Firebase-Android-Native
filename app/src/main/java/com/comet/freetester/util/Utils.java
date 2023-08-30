@@ -76,13 +76,9 @@ public class Utils {
     public static final String EXTRA_SEC = "extra_sec";
     public static final String EXTRA_EX = "extra_ex";
 
-    public static final LatLng HOE_POINT = LatLng.newBuilder().setLatitude(43.179387).setLongitude(-79.248433).build();
-
     public static final int TARGET_WIDTH_LARGE = 900;
     public static final int TARGET_WIDTH_NORMAL = 500;
     public static final int TARGET_WIDTH_SMALL = 200;
-
-    public static final int COACH_SIZE_LIMIT = 20000000;
 
     private static final int REQUEST_EXTERNAL_STORAGE = 1;
     private static String[] PERMISSIONS_STORAGE = {
@@ -770,7 +766,10 @@ public class Utils {
             // We don't have permission so prompt the user
             ActivityCompat.requestPermissions(
                     activity,
-                    PERMISSIONS_CALENDAR,
+                    new String[]{
+                            Manifest.permission.READ_CALENDAR,
+                            Manifest.permission.WRITE_CALENDAR
+                    },
                     REQUEST_CALENDAR
             );
         }
@@ -784,7 +783,10 @@ public class Utils {
             // We don't have permission so prompt the user
             ActivityCompat.requestPermissions(
                     activity,
-                    PERMISSIONS_STORAGE,
+                    new String[]{
+                            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                            Manifest.permission.READ_EXTERNAL_STORAGE
+                    },
                     REQUEST_EXTERNAL_STORAGE
             );
         }

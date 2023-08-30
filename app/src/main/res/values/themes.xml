@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.DeliveryAsap" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.FirebaseNative" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
@@ -47,128 +47,128 @@
         <item name="android:windowBackground">@color/transparent</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.TitleTextStyle">
+    <style name="Theme.FirebaseNative.TitleTextStyle">
         <item name="android:textColor">@color/title_color</item>
         <item name="android:textSize">@dimen/_14sdp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.TitleTextStyle.Big">
+    <style name="Theme.FirebaseNative.TitleTextStyle.Big">
         <item name="android:textSize">@dimen/_16sdp</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.SmallTitleTextStyle">
+    <style name="Theme.FirebaseNative.SmallTitleTextStyle">
         <item name="android:textColor">@color/title_color</item>
         <item name="android:textSize">@dimen/_12sdp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.SmallTitleTextStyle.White">
+    <style name="Theme.FirebaseNative.SmallTitleTextStyle.White">
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.TinyTitleTextStyle">
+    <style name="Theme.FirebaseNative.TinyTitleTextStyle">
         <item name="android:textColor">@color/title_color</item>
         <item name="android:textSize">@dimen/_10sdp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.White">
+    <style name="Theme.FirebaseNative.ClickableLayout.White">
         <item name="android:background">@drawable/clickable_bg_white</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Orange">
+    <style name="Theme.FirebaseNative.ClickableLayout.Orange">
         <item name="android:background">@drawable/clickable_bg_orange</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Blue">
+    <style name="Theme.FirebaseNative.ClickableLayout.Blue">
         <item name="android:background">@drawable/clickable_bg_blue</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Green">
+    <style name="Theme.FirebaseNative.ClickableLayout.Green">
         <item name="android:background">@drawable/clickable_bg_green</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Gray">
+    <style name="Theme.FirebaseNative.ClickableLayout.Gray">
         <item name="android:background">@drawable/clickable_bg_light_gray</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text.Blue.Light">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text.Blue.Light">
         <item name="android:background">@drawable/round_rect_blue</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textStyle">normal</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text.Blue">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text.Blue">
         <item name="android:background">@drawable/clickable_bg_blue</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text.Green">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text.Green">
         <item name="android:background">@drawable/clickable_bg_green</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text.Red">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text.Red">
         <item name="android:background">@drawable/clickable_bg_red</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text.LightGray">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text.LightGray">
         <item name="android:background">@drawable/clickable_bg_light_gray</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.InfoTextStyle">
+    <style name="Theme.FirebaseNative.InfoTextStyle">
         <item name="android:textColor">@color/main_info_color</item>
         <item name="android:textSize">@dimen/_12sdp</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.InfoTextStyle.Bold">
+    <style name="Theme.FirebaseNative.InfoTextStyle.Bold">
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.SubInfoTextStyle">
+    <style name="Theme.FirebaseNative.SubInfoTextStyle">
         <item name="android:textColor">@color/secondary_info_color</item>
         <item name="android:textSize">@dimen/_10sdp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.SubInfoTextStyle.White">
+    <style name="Theme.FirebaseNative.SubInfoTextStyle.White">
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.TinyInfoTextStyle">
+    <style name="Theme.FirebaseNative.TinyInfoTextStyle">
         <item name="android:textColor">?defaultSemiTransparentColor</item>
         <item name="android:textSize">@dimen/_10sdp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.LocationLabelStyle">
+    <style name="Theme.FirebaseNative.LocationLabelStyle">
         <item name="android:textColor">?defaultSemiTransparentColor</item>
         <item name="android:textSize">@dimen/_8sdp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.LocationInfoStyle">
+    <style name="Theme.FirebaseNative.LocationInfoStyle">
         <item name="android:textColor">?defaultInfoColor</item>
         <item name="android:textSize">@dimen/_12sdp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textAllCaps">true</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.LocationInfoStyle.Secondary">
+    <style name="Theme.FirebaseNative.LocationInfoStyle.Secondary">
         <item name="android:textColor">?defaultSemiTransparentColor</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.RoundedRectIconStyle.White">
+    <style name="Theme.FirebaseNative.RoundedRectIconStyle.White">
         <item name="android:background">@color/white</item>
         <item name="riv_border_color">?attr/defaultInfoColor</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ListViewCardStyle">
+    <style name="Theme.FirebaseNative.ListViewCardStyle">
         <item name="android:layout_marginStart">@dimen/_4sdp</item>
         <item name="android:layout_marginEnd">@dimen/_4sdp</item>
         <item name="android:layout_marginTop">@dimen/_2sdp</item>
@@ -178,16 +178,16 @@
         <item name="cardCornerRadius">@dimen/_4sdp</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.RoundedIconStyle.Light">
+    <style name="Theme.FirebaseNative.RoundedIconStyle.Light">
         <item name="android:background">?attr/defaultInfoColor</item>
         <item name="riv_border_color">?attr/defaultSemiTransparentColor</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.RoundedIconStyle.Check">
+    <style name="Theme.FirebaseNative.RoundedIconStyle.Check">
         <item name="android:background">?attr/defaultCheckBackgroundColor</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.DefaultItemInnerLayout">
+    <style name="Theme.FirebaseNative.DefaultItemInnerLayout">
         <item name="android:layout_marginTop">@dimen/_4sdp</item>
         <item name="android:layout_marginBottom">@dimen/_4sdp</item>
         <item name="android:layout_marginStart">@dimen/_6sdp</item>
@@ -222,83 +222,83 @@
         <item name="android:colorControlNormal">@color/white</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.NoActionBar">
+    <style name="Theme.FirebaseNative.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.FirebaseNative.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="Theme.DeliveryAsap.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="Theme.FirebaseNative.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="Theme.DeliveryAsap.TitleText">
+    <style name="Theme.FirebaseNative.TitleText">
         <item name="android:textSize">@dimen/_22sdp</item>
         <item name="android:fontFamily">@font/inter_semi_bold</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.TitleText.Settings">
+    <style name="Theme.FirebaseNative.TitleText.Settings">
         <item name="android:textSize">@dimen/_14sdp</item>
         <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.TitleText.Italic">
+    <style name="Theme.FirebaseNative.TitleText.Italic">
         <item name="android:textSize">@dimen/_22sdp</item>
         <item name="android:fontFamily">@font/caveat_semi_bold</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.CameraText">
+    <style name="Theme.FirebaseNative.CameraText">
         <item name="android:textSize">@dimen/_14sdp</item>
         <item name="android:fontFamily">@font/inter_medium</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.SubTitleText">
+    <style name="Theme.FirebaseNative.SubTitleText">
         <item name="android:textSize">@dimen/_18sdp</item>
         <item name="android:fontFamily">@font/inter_semi_bold</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.SubTitleText.Normal">
+    <style name="Theme.FirebaseNative.SubTitleText.Normal">
         <item name="android:textSize">@dimen/_18sdp</item>
         <item name="android:fontFamily">@font/inter_regular</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.SubTitleText.Italic">
+    <style name="Theme.FirebaseNative.SubTitleText.Italic">
         <item name="android:textSize">@dimen/_19sdp</item>
         <item name="android:fontFamily">@font/caveat_semi_bold</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.Description">
+    <style name="Theme.FirebaseNative.Description">
         <item name="android:textSize">@dimen/_14sdp</item>
         <item name="android:textColor">@color/secondary_info_color</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.InfoText.Overflow">
+    <style name="Theme.FirebaseNative.InfoText.Overflow">
         <item name="android:textSize">@dimen/_10sdp</item>
         <item name="android:textColor">@color/white</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.InfoText">
+    <style name="Theme.FirebaseNative.InfoText">
         <item name="android:textSize">@dimen/_10sdp</item>
         <item name="android:textColor">@color/main_info_color</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.InfoText.Large">
+    <style name="Theme.FirebaseNative.InfoText.Large">
         <item name="android:textSize">@dimen/_12sdp</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.InfoText.Large.Bold">
+    <style name="Theme.FirebaseNative.InfoText.Large.Bold">
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.TestInfoText">
+    <style name="Theme.FirebaseNative.TestInfoText">
         <item name="android:layout_height">@dimen/_16sdp</item>
         <item name="android:paddingTop">@dimen/_2sdp</item>
         <item name="android:paddingBottom">@dimen/_2sdp</item>
@@ -308,7 +308,7 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.TestInfoBg">
+    <style name="Theme.FirebaseNative.TestInfoBg">
         <item name="android:layout_marginStart">@dimen/_4sdp</item>
         <item name="android:layout_marginEnd">@dimen/_4sdp</item>
         <item name="android:layout_marginTop">@dimen/_2sdp</item>
@@ -316,18 +316,18 @@
         <item name="cardCornerRadius">@dimen/_4sdp</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.HomeActionText">
+    <style name="Theme.FirebaseNative.HomeActionText">
         <item name="android:textSize">@dimen/_10sdp</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/inter_semi_bold</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.AuthInfoText">
+    <style name="Theme.FirebaseNative.AuthInfoText">
         <item name="android:textSize">@dimen/_10sdp</item>
         <item name="android:textColor">@color/secondary_info_color</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.AuthInput">
+    <style name="Theme.FirebaseNative.AuthInput">
         <item name="android:layout_height">@dimen/_36sdp</item>
         <item name="android:paddingStart">@dimen/_16sdp</item>
         <item name="android:paddingEnd">@dimen/_16sdp</item>
@@ -338,7 +338,7 @@
         <item name="android:background">@drawable/edit_text_bg_white</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.RoundedIconStyle">
+    <style name="Theme.FirebaseNative.RoundedIconStyle">
         <item name="android:background">?attr/defaultInfoIconBackgroundColor</item>
         <item name="android:scaleType">centerCrop</item>
         <item name="riv_border_width">@dimen/_1sdp</item>
@@ -346,11 +346,11 @@
         <item name="riv_oval">true</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.RoundedIconStyle.White">
+    <style name="Theme.FirebaseNative.RoundedIconStyle.White">
         <item name="android:background">@color/white</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.RoundedRectIconStyle">
+    <style name="Theme.FirebaseNative.RoundedRectIconStyle">
         <item name="android:background">?attr/defaultInfoIconBackgroundColor</item>
         <item name="android:scaleType">centerCrop</item>
         <item name="riv_corner_radius">@dimen/_4sdp</item>
@@ -358,7 +358,7 @@
         <item name="riv_oval">false</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.RoundedRectIconStyle.Badge">
+    <style name="Theme.FirebaseNative.RoundedRectIconStyle.Badge">
         <item name="android:background">?attr/defaultMainBackground</item>
         <item name="android:scaleType">centerCrop</item>
         <item name="riv_corner_radius">@dimen/_6sdp</item>
@@ -368,7 +368,7 @@
         <item name="riv_border_width">1dp</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.RoundedRectIconStyle.Camera">
+    <style name="Theme.FirebaseNative.RoundedRectIconStyle.Camera">
         <item name="android:background">@color/black</item>
         <item name="android:scaleType">centerCrop</item>
         <item name="riv_border_color">@color/white</item>
@@ -378,26 +378,26 @@
         <item name="riv_oval">false</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout">
+    <style name="Theme.FirebaseNative.ClickableLayout">
         <item name="android:background">@drawable/clickable_bg</item>
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text" parent="@android:style/Widget.TextView">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text" parent="@android:style/Widget.TextView">
         <item name="android:paddingStart">@dimen/_14sdp</item>
         <item name="android:paddingEnd">@dimen/_14sdp</item>
         <item name="android:textSize">@dimen/_14sdp</item>
         <item name="android:gravity">center</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text.White">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text.White">
         <item name="android:background">@drawable/btn_bg_white</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:layout_height">@dimen/_40sdp</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text.Edit">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text.Edit">
         <item name="android:paddingStart">0dp</item>
         <item name="android:paddingEnd">0dp</item>
         <item name="android:background">@color/transparent</item>
@@ -406,19 +406,19 @@
         <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text.Coral">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text.Coral">
         <item name="android:background">@drawable/btn_bg_coral</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:layout_height">@dimen/_40sdp</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text.Gray">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text.Gray">
         <item name="android:background">@drawable/btn_bg_light</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:layout_height">@dimen/_40sdp</item>
     </style>
 
-    <style name="Theme.DeliveryAsap.ClickableLayout.Text.Stroke">
+    <style name="Theme.FirebaseNative.ClickableLayout.Text.Stroke">
         <item name="android:background">@drawable/btn_bg_coral_stroke</item>
         <item name="android:textColor">@color/black</item>
         <item name="android:layout_height">@dimen/_40sdp</item>

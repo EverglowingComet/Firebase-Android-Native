@@ -19,7 +19,7 @@
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginBottom="@dimen/_8sdp"
-            style="@style/Theme.DeliveryAsap.ClickableLayout"
+            style="@style/Theme.FirebaseNative.ClickableLayout"
             android:src="@drawable/ic_back" />
 
         <TextView
@@ -29,7 +29,7 @@
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginEnd="@dimen/_12sdp"
             android:layout_gravity="center_vertical"
-            style="@style/Theme.DeliveryAsap.TitleTextStyle.Big"
+            style="@style/Theme.FirebaseNative.TitleTextStyle.Big"
             android:text="@string/edit_gallery" />
 
     </LinearLayout>
@@ -54,7 +54,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:src="@drawable/upload_icon"
-            style="@style/Theme.DeliveryAsap.RoundedIconStyle"
+            style="@style/Theme.FirebaseNative.RoundedIconStyle"
             android:background="@color/coral" />
     </RelativeLayout>
 
@@ -64,7 +64,7 @@
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_12sdp"
-        style="@style/Theme.DeliveryAsap.SmallTitleTextStyle"
+        style="@style/Theme.FirebaseNative.SmallTitleTextStyle"
         android:text="@string/title" />
 
     <EditText
@@ -75,7 +75,7 @@
         android:layout_marginEnd="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_4sdp"
         android:textSize="@dimen/_12sdp"
-        style="@style/Theme.DeliveryAsap.SubInfoTextStyle"
+        style="@style/Theme.FirebaseNative.SubInfoTextStyle"
         tools:text="Title"/>
 
     <TextView
@@ -84,7 +84,7 @@
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_12sdp"
-        style="@style/Theme.DeliveryAsap.SmallTitleTextStyle"
+        style="@style/Theme.FirebaseNative.SmallTitleTextStyle"
         android:text="@string/story" />
 
     <EditText
@@ -96,7 +96,7 @@
         android:layout_marginTop="@dimen/_4sdp"
         android:textSize="@dimen/_12sdp"
         android:maxLines="10"
-        style="@style/Theme.DeliveryAsap.SubInfoTextStyle"
+        style="@style/Theme.FirebaseNative.SubInfoTextStyle"
         tools:text="Story"/>
 
     <View
@@ -110,6 +110,6 @@
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_12sdp"
         android:layout_marginBottom="@dimen/_12sdp"
-        style="@style/Theme.DeliveryAsap.ClickableLayout.Text.Coral"
+        style="@style/Theme.FirebaseNative.ClickableLayout.Text.Coral"
         android:text="@string/submit" />
 </LinearLayout>

@@ -15,7 +15,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.DeliveryAsap"
+        android:theme="@style/Theme.FirebaseNative"
         tools:targetApi="31">
         <activity
             android:name=".ui.gallery.GalleryDetails"
@@ -26,7 +26,7 @@
         <activity
             android:name=".ui.auth.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.DeliveryAsap">
+            android:theme="@style/Theme.FirebaseNative">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

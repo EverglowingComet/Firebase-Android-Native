@@ -19,7 +19,7 @@
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginBottom="@dimen/_8sdp"
-            style="@style/Theme.DeliveryAsap.ClickableLayout"
+            style="@style/Theme.FirebaseNative.ClickableLayout"
             android:src="@drawable/ic_back" />
 
         <TextView
@@ -28,7 +28,7 @@
             android:layout_marginStart="@dimen/_12sdp"
             android:layout_marginEnd="@dimen/_12sdp"
             android:layout_gravity="center_vertical"
-            style="@style/Theme.DeliveryAsap.TitleTextStyle.Big"
+            style="@style/Theme.FirebaseNative.TitleTextStyle.Big"
             android:text="@string/gallery_details" />
 
     </LinearLayout>
@@ -55,7 +55,7 @@
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_12sdp"
-        style="@style/Theme.DeliveryAsap.SmallTitleTextStyle"
+        style="@style/Theme.FirebaseNative.SmallTitleTextStyle"
         android:text="@string/title" />
 
     <TextView
@@ -64,7 +64,7 @@
         android:layout_marginStart="@dimen/_12sdp"
         android:layout_marginEnd="@dimen/_12sdp"
         android:layout_marginTop="@dimen/_12sdp"
-        style="@style/Theme.DeliveryAsap.SmallTitleTextStyle"
+        style="@style/Theme.FirebaseNative.SmallTitleTextStyle"
         android:text="@string/story" />
 
     <TextView
@@ -76,7 +76,7 @@
         android:layout_marginTop="@dimen/_4sdp"
         android:textSize="@dimen/_12sdp"
         android:maxLines="10"
-        style="@style/Theme.DeliveryAsap.SubInfoTextStyle"
+        style="@style/Theme.FirebaseNative.SubInfoTextStyle"
         tools:text="Story"/>
 
     <View

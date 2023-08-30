@@ -39,21 +39,21 @@
                 android:layout_marginEnd="@dimen/_48sdp"
                 android:layout_marginBottom="@dimen/_30sdp"
                 android:gravity="center"
-                style="@style/Theme.DeliveryAsap.TitleText.Italic"
+                style="@style/Theme.FirebaseNative.TitleText.Italic"
                 android:textSize="@dimen/_36sdp"
                 android:text="@string/welcome" />
 
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
-                style="@style/Theme.DeliveryAsap.AuthInput"
+                style="@style/Theme.FirebaseNative.AuthInput"
                 android:layout_marginBottom="@dimen/_18sdp"
                 android:inputType="textEmailAddress"
                 android:hint="@string/email_placeholder" />
 
             <EditText
                 android:id="@+id/password"
-                style="@style/Theme.DeliveryAsap.AuthInput"
+                style="@style/Theme.FirebaseNative.AuthInput"
                 android:layout_width="match_parent"
                 android:layout_marginBottom="@dimen/_18sdp"
                 android:inputType="textPassword"
@@ -65,7 +65,7 @@
                 android:layout_marginStart="@dimen/_36sdp"
                 android:layout_marginEnd="@dimen/_36sdp"
                 android:layout_marginBottom="@dimen/_10sdp"
-                style="@style/Theme.DeliveryAsap.ClickableLayout.Text.Coral"
+                style="@style/Theme.FirebaseNative.ClickableLayout.Text.Coral"
                 android:text="@string/login" />
 
             <LinearLayout
@@ -87,13 +87,13 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginStart="@dimen/_4sdp"
-                    style="@style/Theme.DeliveryAsap.AuthInfoText"
+                    style="@style/Theme.FirebaseNative.AuthInfoText"
                     android:text="@string/remember_me" />
                 <TextView
                     android:id="@+id/forgot_pwd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    style="@style/Theme.DeliveryAsap.AuthInfoText"
+                    style="@style/Theme.FirebaseNative.AuthInfoText"
                     android:text="@string/forgot_password" />
             </LinearLayout>
 
@@ -114,7 +114,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_4sdp"
                     android:layout_marginEnd="@dimen/_4sdp"
-                    style="@style/Theme.DeliveryAsap.SubTitleText"
+                    style="@style/Theme.FirebaseNative.SubTitleText"
                     android:textSize="@dimen/_12sdp"
                     android:textAllCaps="true"
                     android:text="@string/or" />
@@ -131,7 +131,7 @@
                 android:layout_marginStart="@dimen/_36sdp"
                 android:layout_marginEnd="@dimen/_36sdp"
                 android:layout_marginBottom="@dimen/_16sdp"
-                style="@style/Theme.DeliveryAsap.ClickableLayout.Text.Stroke"
+                style="@style/Theme.FirebaseNative.ClickableLayout.Text.Stroke"
                 android:text="@string/create_account" />
 
         </LinearLayout>
