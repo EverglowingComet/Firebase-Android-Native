@@ -225,32 +225,4 @@ public class FirebaseUtils {
         }
     }
 
-    public static ArrayList<Item> getItemList(HashMap<String, Object> map, String key) {
-        ArrayList<Item> result = new ArrayList<>();
-
-        try {
-            HashMap<String, HashMap<String, Object>> data = (HashMap<String, HashMap<String, Object>>) map.get(key);
-
-            for (String item : data.keySet()) {
-                result.add(Item.fromMap(data.get(item)));
-            }
-        } catch (Exception e) {
-            return result;
-        }
-        return result;
-    }
-
-    public static HashMap<String, Object> getItemListMap(ArrayList<Item> data) {
-        HashMap<String, Object> result = new HashMap<>();
-
-        try {
-            for (Item item : data) {
-                result.put(item.id, item.getDataMap());
-            }
-        } catch (Exception e) {
-            return result;
-        }
-        return result;
-    }
-
 }
