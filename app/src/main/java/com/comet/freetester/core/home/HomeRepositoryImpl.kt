@@ -1,15 +1,19 @@
 package com.comet.freetester.core.home
 
 import com.comet.freetester.core.local.LocalDataSource
+import com.comet.freetester.core.local.store.DataStorage
 import com.comet.freetester.core.remote.RemoteDataSource
 import com.comet.freetester.core.remote.callback.AsyncApiCallback
 import com.comet.freetester.core.remote.data.GalleryItem
 import com.comet.freetester.core.remote.data.UserProfile
 import com.comet.freetester.util.Utils
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HomeRepositoryImpl(
+class HomeRepositoryImpl @Inject constructor(
+    private val dataStorage: DataStorage,
     private val localDataSource: LocalDataSource,
     private val remoteDataSource: RemoteDataSource
 ) : HomeRepository {

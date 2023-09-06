@@ -42,7 +42,7 @@ class GalleryItemEdit : ArenaActivity() {
         if (iconUri != null) {
             binding.thumbnail.setImageURI(iconUri)
         } else {
-            Utils.setImageUri(this, binding.thumbnail, gallery.photoUri, R.drawable.placeholder)
+            Utils.setImageUri(binding.thumbnail, gallery.photoUri, R.drawable.placeholder)
             binding.titleInput.setText(gallery.title)
             binding.storyInput.setText(gallery.note)
         }

@@ -8,6 +8,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 import com.comet.freetester.core.config.AppConfig
 import com.comet.freetester.core.local.dao.GalleryItemDao
 import com.comet.freetester.core.local.dao.UserProfileDao
+import com.comet.freetester.core.local.entity.GalleryItemEntity
 import com.comet.freetester.core.local.entity.UserProfileEntity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -15,7 +16,7 @@ import kotlinx.coroutines.launch
 @Database(
     entities = [
         UserProfileEntity::class,
-        GalleryItemDao::class,
+        GalleryItemEntity::class,
    ],
     version = 1,
     exportSchema = false

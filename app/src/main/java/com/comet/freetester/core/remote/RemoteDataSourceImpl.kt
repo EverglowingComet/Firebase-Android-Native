@@ -3,8 +3,9 @@ package com.comet.freetester.core.remote
 import com.comet.freetester.core.remote.api.MainApis
 import com.comet.freetester.core.remote.callback.AsyncApiCallback
 import com.comet.freetester.core.remote.data.GalleryItem
+import javax.inject.Inject
 
-class RemoteDataSourceImpl(
+class RemoteDataSourceImpl @Inject constructor(
     private val api: MainApis,
 ) : RemoteDataSource {
     override fun loadGalleryData(callback: AsyncApiCallback) {

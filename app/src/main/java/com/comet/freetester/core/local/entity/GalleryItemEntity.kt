@@ -5,10 +5,10 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "gallery_item")
 data class GalleryItemEntity(
-    @PrimaryKey() var id: String?,
-    var uid: String?,
-    var title: String?,
-    var note: String?,
-    var photoUri: String?,
-    var createdAt: Long,
+    @PrimaryKey val id: String,
+    val uid: String?,
+    val title: String?,
+    val note: String?,
+    val photoUri: String?,
+    val createdAt: Long,
 )

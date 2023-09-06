@@ -4,7 +4,10 @@ import android.app.Application;
 
 import com.google.firebase.FirebaseApp;
 
-public class MainApplication  extends Application {
+import dagger.hilt.android.HiltAndroidApp;
+
+@HiltAndroidApp
+public class MainApplication extends Application {
 
     @Override
     public void onCreate() {

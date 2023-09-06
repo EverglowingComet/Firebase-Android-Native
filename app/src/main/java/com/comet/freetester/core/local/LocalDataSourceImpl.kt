@@ -38,8 +38,12 @@ class LocalDataSourceImpl @Inject constructor(
         galleryItemDao.insertAll(items)
     }
 
-    override fun getUserProfile(uid: String): Flow<UserProfile> {
-        return userProfileDao.getUserProfileByUid(uid).map { entityToProfileMapper.map(it) }
+    override fun getUserProfile(uid: String): UserProfile? {
+        return userProfileDao.getUserProfileByUid(uid)?.let { entityToProfileMapper.map(it) }
+    }
+
+    override fun getUserProfileFlow(uid: String): Flow<UserProfile> {
+        return userProfileDao.getUserProfileFlowByUid(uid).map { entityToProfileMapper.map(it) }
     }
 
     override fun getGalleryItemById(id: String?): Flow<GalleryItem> {

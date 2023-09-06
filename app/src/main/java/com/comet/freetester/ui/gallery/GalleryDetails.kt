@@ -28,7 +28,7 @@ class GalleryDetails : ArenaActivity() {
     }
 
     override fun updateContents() {
-        Utils.setImageUri(this, binding.thumbnail, gallery.photoUri, R.drawable.placeholder)
+        Utils.setImageUri(binding.thumbnail, gallery.photoUri, R.drawable.placeholder)
         binding.titleText.text = gallery.title
         binding.storyText.text = gallery.note
     }

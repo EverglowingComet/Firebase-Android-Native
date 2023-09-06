@@ -19,5 +19,8 @@ interface UserProfileDao {
 
     @Transaction
     @Query("SELECT * FROM user WHERE uid=:uid")
-    fun getUserProfileByUid(uid: String?): Flow<UserProfileEntity>
+    fun getUserProfileFlowByUid(uid: String?): Flow<UserProfileEntity>
+
+    @Query("SELECT * FROM user WHERE uid=:uid")
+    fun getUserProfileByUid(uid: String?): UserProfileEntity?
 }

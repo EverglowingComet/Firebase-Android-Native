@@ -29,14 +29,14 @@ class GalleryListAdapter(
             GalleryListItemBinding.inflate(LayoutInflater.from(context), parent, false)
 
         val item = getItem(position)
-        Utils.setImageUri(context, binding.thumbnail, item.photoUri, R.drawable.placeholder)
+        Utils.setImageUri(binding.thumbnail, item.photoUri, R.drawable.placeholder)
         binding.title.text = item.title
 
         binding.date.text = Utils.getDateTimeString(item.createdAt)
         val dataModel = DeliveryDataModel.getInstance()
         dataModel.getUser(item.uid)?.let {
             binding.userName.text = it.nameStr
-            Utils.setImageUri(context, binding.userIcon, it.photoUri, R.drawable.player_photo_default)
+            Utils.setImageUri(binding.userIcon, it.photoUri, R.drawable.player_photo_default)
         }
         return binding.root
     }

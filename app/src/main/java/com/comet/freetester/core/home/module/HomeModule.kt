@@ -1,6 +1,9 @@
 package com.comet.freetester.core.home.module
 
 import android.content.Context
+import androidx.datastore.core.DataStoreFactory
+import androidx.datastore.preferences.preferencesDataStore
+import androidx.datastore.preferences.preferencesDataStoreFile
 import com.comet.freetester.core.remote.api.MainApis
 import com.comet.freetester.core.home.HomeRepository
 import com.comet.freetester.core.home.HomeRepositoryImpl
@@ -14,6 +17,9 @@ import com.comet.freetester.core.local.mapper.EntityToGalleryItemMapper
 import com.comet.freetester.core.local.mapper.EntityToProfileMapper
 import com.comet.freetester.core.local.mapper.GalleryItemToEntityMapper
 import com.comet.freetester.core.local.mapper.ProfileToEntityMapper
+import com.comet.freetester.core.local.store.DataStorage
+import com.comet.freetester.core.local.store.DataStorageImpl
+import com.comet.freetester.core.local.store.MAIN_PREF
 import com.comet.freetester.core.remote.RemoteDataSource
 import com.comet.freetester.core.remote.RemoteDataSourceImpl
 import dagger.Module
@@ -26,7 +32,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class HomeModule {
+object HomeModule {
     @Provides
     @Singleton
     fun provideUserProfileToEntityMapper() : ProfileToEntityMapper = ProfileToEntityMapper()
@@ -92,10 +98,21 @@ class HomeModule {
 
     @Provides
     @Singleton
+    fun provideDataStorage(
+        @ApplicationContext context: Context
+    ) : DataStorage =
+        DataStorageImpl(
+            context
+        )
+
+    @Provides
+    @Singleton
     fun provideHomeRepository(
+        dataStorage: DataStorage,
         localDataSource: LocalDataSource,
         remoteDataSource: RemoteDataSource
     ) : HomeRepository = HomeRepositoryImpl(
+        dataStorage,
         localDataSource,
         remoteDataSource
     )

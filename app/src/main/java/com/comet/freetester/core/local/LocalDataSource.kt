@@ -14,7 +14,9 @@ interface LocalDataSource {
 
     suspend fun insertGalleryItems(list: List<GalleryItem>)
 
-    fun getUserProfile(uid: String) : Flow<UserProfile>
+    fun getUserProfile(uid: String) : UserProfile?
+
+    fun getUserProfileFlow(uid: String) : Flow<UserProfile>
 
     fun getGalleryItemById(id: String?) : Flow<GalleryItem>
 
