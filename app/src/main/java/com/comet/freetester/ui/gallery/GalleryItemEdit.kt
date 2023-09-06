@@ -4,7 +4,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.text.TextUtils
 import com.comet.freetester.R
-import com.comet.freetester.data.GalleryItem
+import com.comet.freetester.core.remote.data.GalleryItem
 import com.comet.freetester.databinding.ActivityGalleryItemEditBinding
 import com.comet.freetester.model.FirebaseDatabaseListener
 import com.comet.freetester.model.FirebaseStorageListener
@@ -76,7 +76,7 @@ class GalleryItemEdit : ArenaActivity() {
         }
         gallery.title = binding.titleInput.text.toString()
         gallery.note = binding.storyInput.text.toString()
-        gallery.uid = dataModel.user.uid
+        gallery.uid = dataModel.userProfile.uid
 
         if (gallery.id == null) {
             gallery.id = dataModel.generateId("gallery")

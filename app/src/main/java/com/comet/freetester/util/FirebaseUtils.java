@@ -1,9 +1,32 @@
 package com.comet.freetester.util;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
+import javax.annotation.Nullable;
+
 public class FirebaseUtils {
+
+    public static String getStringFromStringArray(ArrayList<String> arrayList) {
+        StringBuilder result = new StringBuilder();
+        for (String item : arrayList) {
+            if (!result.toString().equals("")) {
+                result.append(",");
+            }
+            result.append(item);
+        }
+        return result.toString();
+    }
+
+    public static ArrayList<String> getStringArrayFromString(@Nullable String str) {
+        ArrayList<String> result = new ArrayList<String>();
+        if (str != null) {
+            result.addAll(Arrays.asList(str.split(",")));
+        }
+        return result;
+    }
+
     public static int getInteger(HashMap<String, Object> map, String key, int defaultValue) {
         if (map.containsKey(key)) {
             try {

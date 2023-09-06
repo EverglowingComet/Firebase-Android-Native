@@ -81,8 +81,8 @@ class SignUpActivity : ArenaActivity() {
                         if (task.exception == null) {
                             val uid = task.result.user!!.uid
                             dataModel = DeliveryDataModel.getInstance(uid)
-                            dataModel.user.email = emailStr
-                            dataModel.user.username = userName
+                            dataModel.userProfile.email = emailStr
+                            dataModel.userProfile.username = userName
 
                             dataModel.saveUser(object : FirebaseDatabaseListener {
                                 override fun onSuccess() {
@@ -135,8 +135,8 @@ class SignUpActivity : ArenaActivity() {
 
                 uiHandler.sendEmptyMessage(UIHandler.MSG_SHOW_PROGRESS)
                 dataModel = DeliveryDataModel.getInstance(uid)
-                dataModel.user.email = emailStr
-                dataModel.user.username = userName
+                dataModel.userProfile.email = emailStr
+                dataModel.userProfile.username = userName
 
                 dataModel.saveUser(object : FirebaseDatabaseListener {
                     override fun onSuccess() {

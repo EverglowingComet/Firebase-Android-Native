@@ -5,8 +5,8 @@ import android.net.Uri;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.comet.freetester.data.GalleryItem;
-import com.comet.freetester.data.User;
+import com.comet.freetester.core.remote.data.GalleryItem;
+import com.comet.freetester.core.remote.data.UserProfile;
 import com.comet.freetester.util.Utils;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -29,13 +29,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class DeliveryDataModel {
-    public ArrayList<User> userList = new ArrayList<>();
+    public ArrayList<UserProfile> userProfileList = new ArrayList<>();
     public ArrayList<GalleryItem> galleryList = new ArrayList<>();
 
     public static DeliveryDataModel sInstance = null;
 
     public static DeliveryDataModel getInstance(String uid) {
-        if (sInstance == null || sInstance.user == null || !sInstance.user.uid.equals(uid)) {
+        if (sInstance == null || sInstance.userProfile == null || !sInstance.userProfile.uid.equals(uid)) {
             sInstance = new DeliveryDataModel(uid);
         }
 
@@ -55,11 +55,11 @@ public class DeliveryDataModel {
     public boolean inProgress = false;
     public boolean isConnected = false;
     public String idToken;
-    public User user;
+    public UserProfile userProfile;
     private ValueEventListener connectivityListener;
 
     public DeliveryDataModel(String uid) {
-        user = new User(uid);
+        userProfile = new UserProfile(uid);
 
         connectivityListener = FirebaseDatabase.getInstance().getReference(".info/connected").addValueEventListener(new ValueEventListener() {
             @Override
@@ -128,20 +128,20 @@ public class DeliveryDataModel {
     }
 
     public void loadUser(final FirebaseDatabaseListener listener) {
-        database.getReference("user").child(user.uid).addListenerForSingleValueEvent(new ValueEventListener() {
+        database.getReference("user").child(userProfile.uid).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 try {
                     HashMap<String, Object> map = (HashMap<String, Object>) dataSnapshot.getValue();
-                    userList = new ArrayList<>();
-                    user = null;
+                    userProfileList = new ArrayList<>();
+                    userProfile = null;
 
                     if (map != null) {
-                        user = User.fromMap(map);
+                        userProfile = UserProfile.fromMap(map);
                     }
-                    userList.add(user);
+                    userProfileList.add(userProfile);
 
-                    if (user != null) {
+                    if (userProfile != null) {
                         listener.onSuccess();
                     } else {
                         listener.onFailure(null);
@@ -159,7 +159,7 @@ public class DeliveryDataModel {
     }
 
     public void saveUser(final FirebaseDatabaseListener listener) {
-        database.getReference("user").child(user.uid).setValue(user.getDataMap(), new DatabaseReference.CompletionListener() {
+        database.getReference("user").child(userProfile.uid).setValue(userProfile.getDataMap(), new DatabaseReference.CompletionListener() {
             @Override
             public void onComplete(@Nullable DatabaseError databaseError, @NonNull DatabaseReference databaseReference) {
                 if (databaseError == null) {
@@ -194,12 +194,12 @@ public class DeliveryDataModel {
                     }
                 }
 
-                userList = new ArrayList<>();
+                userProfileList = new ArrayList<>();
                 map = Utils.getDataMapForKey(data1, "userList");
                 if (map != null) {
                     for (String id : map.keySet()) {
                         HashMap<String, Object> item = Utils.getDataMapForKey(map, id);
-                        userList.add(User.fromMap(item));
+                        userProfileList.add(UserProfile.fromMap(item));
                     }
                 }
 
@@ -255,8 +255,8 @@ public class DeliveryDataModel {
         return null;
     }
 
-    public @Nullable User getUser(@Nullable String uid) {
-        for (User item : userList) {
+    public @Nullable UserProfile getUser(@Nullable String uid) {
+        for (UserProfile item : userProfileList) {
             if (uid != null && uid.equals(item.uid)) {
                 return item;
             }

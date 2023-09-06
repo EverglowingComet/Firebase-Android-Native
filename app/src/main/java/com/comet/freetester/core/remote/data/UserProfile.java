@@ -1,4 +1,4 @@
-package com.comet.freetester.data;
+package com.comet.freetester.core.remote.data;
 
 import com.comet.freetester.util.FirebaseUtils;
 
@@ -7,7 +7,7 @@ import java.util.HashMap;
 
 import javax.annotation.Nullable;
 
-public class User  {
+public class UserProfile {
     public String uid;
     public String username;
     public String email;
@@ -19,6 +19,7 @@ public class User  {
     public @Nullable String countryCode;
     public @Nullable String phoneNumber;
     public @Nullable String gender;
+    public @Nullable String bio;
     public double weight;
     public long birthday;
     public boolean metricUnits = true;
@@ -26,7 +27,7 @@ public class User  {
     public ArrayList<String> followerIds = new ArrayList<>();
     public ArrayList<String> pendingIds = new ArrayList<>();
 
-    public User(String uid) {
+    public UserProfile(String uid) {
         this.uid = uid;
     }
 
@@ -47,6 +48,7 @@ public class User  {
         result.put("countryCode", countryCode);
         result.put("phoneNumber", phoneNumber);
         result.put("gender", gender);
+        result.put("bio", bio);
         result.put("weight", weight);
         result.put("metricUnits", metricUnits);
         result.put("birthday", birthday);
@@ -54,9 +56,9 @@ public class User  {
         return result;
     }
 
-    public static User fromMap(HashMap<String, Object> map) {
+    public static UserProfile fromMap(HashMap<String, Object> map) {
         String uid = (String) map.get("uid");
-        User result = new User(uid);
+        UserProfile result = new UserProfile(uid);
 
         result.username = (String) map.get("username");
         if (result.username == null) {
@@ -74,6 +76,7 @@ public class User  {
         result.countryCode = (String) map.get("countryCode");
         result.phoneNumber = (String) map.get("phoneNumber");
         result.gender = (String) map.get("gender");
+        result.bio = (String) map.get("bio");
         result.weight = FirebaseUtils.getDouble(map, "weight", 0);
         result.birthday = FirebaseUtils.getLong(map, "birthday", 0);
         result.metricUnits = FirebaseUtils.getBoolean(map, "metricUnits", true);

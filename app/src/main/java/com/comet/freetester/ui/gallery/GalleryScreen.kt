@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import com.comet.freetester.R
-import com.comet.freetester.data.GalleryItem
+import com.comet.freetester.core.remote.data.GalleryItem
 import com.comet.freetester.databinding.ActivityGalleryScreenBinding
 import com.comet.freetester.model.FirebaseDatabaseListener
 import com.comet.freetester.ui.template.ArenaActivity
@@ -35,7 +35,7 @@ class GalleryScreen : ArenaActivity() {
         binding.listView.setOnItemClickListener { _, _, position, _ ->
             val item = adapter.getItem(position)
 
-            if (item.uid == dataModel.user.uid) {
+            if (item.uid == dataModel.userProfile.uid) {
                 AlertDialog.Builder(this)
                     .setItems(R.array.gallery_action) { _, which ->
                         if (which == 0) {

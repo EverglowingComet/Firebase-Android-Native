@@ -2,7 +2,7 @@ package com.comet.freetester.ui.gallery
 
 import android.os.Bundle
 import com.comet.freetester.R
-import com.comet.freetester.data.GalleryItem
+import com.comet.freetester.core.remote.data.GalleryItem
 import com.comet.freetester.databinding.ActivityGalleryDetailsBinding
 import com.comet.freetester.ui.template.ArenaActivity
 import com.comet.freetester.util.Utils

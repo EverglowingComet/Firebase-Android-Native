@@ -988,35 +988,35 @@ public class Utils {
         return 0;
     }
 
-    public static void setImageUri(Context context, ImageView view, String uri, int resId) {
+    public static void setImageUri(ImageView view, String uri, int resId) {
         if (!TextUtils.isEmpty(uri)) {
-            Picasso.with(context).load(uri).resize(TARGET_WIDTH_NORMAL, 0).placeholder(resId).into(view);
+            Picasso.get().load(uri).resize(TARGET_WIDTH_NORMAL, 0).placeholder(resId).into(view);
         } else {
             view.setImageResource(resId);
         }
     }
 
-    public static void setImageUri(Context context, ImageView view, String uri) {
+    public static void setImageUri(ImageView view, String uri) {
         if (!TextUtils.isEmpty(uri)) {
-            Picasso.with(context).load(uri).resize(TARGET_WIDTH_NORMAL, 0).into(view);
+            Picasso.get().load(uri).resize(TARGET_WIDTH_NORMAL, 0).into(view);
         }
     }
 
-    public static void setLargeImageUri(Context context, ImageView view, String uri, int resId) {
+    public static void setLargeImageUri(ImageView view, String uri, int resId) {
         if (!TextUtils.isEmpty(uri)) {
-            Picasso.with(context).load(uri).resize(TARGET_WIDTH_LARGE, 0).placeholder(resId).into(view);
+            Picasso.get().load(uri).resize(TARGET_WIDTH_LARGE, 0).placeholder(resId).into(view);
         } else {
             view.setImageResource(resId);
         }
     }
 
-    public static void setLargeImageUri(Context context, ImageView view, String uri) {
-        Picasso.with(context).load(uri).resize(TARGET_WIDTH_LARGE, 0).into(view);
+    public static void setLargeImageUri(ImageView view, String uri) {
+        Picasso.get().load(uri).resize(TARGET_WIDTH_LARGE, 0).into(view);
     }
 
-    public static void setSmallImageUri(Context context, ImageView view, String uri, int resId) {
+    public static void setSmallImageUri(ImageView view, String uri, int resId) {
         if (!TextUtils.isEmpty(uri)) {
-            Picasso.with(context).load(uri).resize(TARGET_WIDTH_SMALL, 0).placeholder(resId).into(view);
+            Picasso.get().load(uri).resize(TARGET_WIDTH_SMALL, 0).placeholder(resId).into(view);
         } else {
             view.setImageResource(resId);
         }

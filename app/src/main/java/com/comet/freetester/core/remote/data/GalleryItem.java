@@ -1,4 +1,4 @@
-package com.comet.freetester.data;
+package com.comet.freetester.core.remote.data;
 
 
 import com.comet.freetester.util.FirebaseUtils;
@@ -11,10 +11,6 @@ public class GalleryItem {
     public String title;
     public String note;
     public String photoUri;
-    public boolean delivered;
-    public boolean completed;
-    public boolean paid;
-    public double price;
     public long createdAt;
 
     public HashMap<String, Object> getDataMap() {
@@ -25,10 +21,6 @@ public class GalleryItem {
         result.put("title", title);
         result.put("note", note);
         result.put("photoUri", photoUri);
-        result.put("delivered", delivered);
-        result.put("completed", completed);
-        result.put("paid", paid);
-        result.put("price", price);
         result.put("createdAt", createdAt);
 
         return result;
@@ -42,10 +34,6 @@ public class GalleryItem {
         result.title = (String) map.get("title");
         result.note = (String) map.get("note");
         result.photoUri = (String) map.get("photoUri");
-        result.delivered = FirebaseUtils.getBoolean(map, "delivered", false);
-        result.completed = FirebaseUtils.getBoolean(map, "completed", false);
-        result.paid = FirebaseUtils.getBoolean(map, "paid", false);
-        result.price = FirebaseUtils.getDouble(map, "price", 0);
         result.createdAt = FirebaseUtils.getLong(map, "createdAt", 0);
 
         return result;
