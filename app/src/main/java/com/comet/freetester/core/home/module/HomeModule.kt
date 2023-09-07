@@ -1,13 +1,11 @@
 package com.comet.freetester.core.home.module
 
 import android.content.Context
-import androidx.datastore.core.DataStoreFactory
-import androidx.datastore.preferences.preferencesDataStore
-import androidx.datastore.preferences.preferencesDataStoreFile
 import com.comet.freetester.core.remote.api.MainApis
 import com.comet.freetester.core.home.HomeRepository
 import com.comet.freetester.core.home.HomeRepositoryImpl
 import com.comet.freetester.core.home.di.ApplicationScope
+import com.comet.freetester.core.home.di.DefaultDispatcher
 import com.comet.freetester.core.local.LocalDataSource
 import com.comet.freetester.core.local.LocalDataSourceImpl
 import com.comet.freetester.core.local.dao.GalleryItemDao
@@ -27,6 +25,7 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import javax.inject.Singleton
 
@@ -99,10 +98,12 @@ object HomeModule {
     @Provides
     @Singleton
     fun provideDataStorage(
+        @DefaultDispatcher defaultDispatcher: CoroutineDispatcher,
         @ApplicationContext context: Context
     ) : DataStorage =
         DataStorageImpl(
-            context
+            defaultDispatcher,
+            context,
         )
 
     @Provides

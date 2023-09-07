@@ -1,9 +1,9 @@
 package com.comet.freetester.core.local.store
 
-import kotlinx.coroutines.flow.Flow
+import androidx.lifecycle.LiveData
 
 
 interface DataStorage {
-    fun getCurrentUidFlow() : Flow<String>
+    fun getCurrentUidFlow() : LiveData<String?>
     suspend fun setCurrentUid(uid: String?)
 }

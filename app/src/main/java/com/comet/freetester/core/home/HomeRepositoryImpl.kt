@@ -1,5 +1,7 @@
 package com.comet.freetester.core.home
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.map
 import com.comet.freetester.core.local.LocalDataSource
 import com.comet.freetester.core.local.store.DataStorage
 import com.comet.freetester.core.remote.RemoteDataSource
@@ -8,7 +10,6 @@ import com.comet.freetester.core.remote.data.GalleryItem
 import com.comet.freetester.core.remote.data.UserProfile
 import com.comet.freetester.util.Utils
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -17,6 +18,12 @@ class HomeRepositoryImpl @Inject constructor(
     private val localDataSource: LocalDataSource,
     private val remoteDataSource: RemoteDataSource
 ) : HomeRepository {
+
+    override fun getCurrentUserFlow(): LiveData<UserProfile?> {
+        return dataStorage.getCurrentUidFlow().map {
+            localDataSource.getUserProfile(it)
+        }
+    }
 
     override fun loadGalleryData(scope: CoroutineScope, callback: AsyncApiCallback) {
         remoteDataSource.loadGalleryData(object : AsyncApiCallback {

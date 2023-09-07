@@ -6,7 +6,9 @@ import androidx.datastore.preferences.core.Preferences
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
-import kotlinx.coroutines.flow.Flow
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.asLiveData
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 
@@ -14,16 +16,17 @@ const val MAIN_PREF = "main_pref"
 const val CURRENT_UID = "current_uid"
 
 class DataStorageImpl @Inject constructor(
+    private val defaultDispatcher: CoroutineDispatcher,
     private val context: Context
 ) : DataStorage {
 
     private val Context.datastore : DataStore<Preferences> by preferencesDataStore(MAIN_PREF)
     private val curUserKey = stringPreferencesKey(CURRENT_UID)
 
-    override fun getCurrentUidFlow(): Flow<String> {
+    override fun getCurrentUidFlow(): LiveData<String?> {
         return context.datastore.data.map { preferences ->
-            preferences[curUserKey]?: ""
-        }
+            preferences[curUserKey]
+        }.asLiveData(defaultDispatcher)
     }
 
     override suspend fun setCurrentUid(uid: String?) {

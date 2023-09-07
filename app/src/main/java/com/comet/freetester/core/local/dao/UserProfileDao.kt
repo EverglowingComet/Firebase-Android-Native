@@ -1,5 +1,6 @@
 package com.comet.freetester.core.local.dao
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -19,7 +20,7 @@ interface UserProfileDao {
 
     @Transaction
     @Query("SELECT * FROM user WHERE uid=:uid")
-    fun getUserProfileFlowByUid(uid: String?): Flow<UserProfileEntity>
+    fun getUserProfileFlowByUid(uid: String?): LiveData<UserProfileEntity?>
 
     @Query("SELECT * FROM user WHERE uid=:uid")
     fun getUserProfileByUid(uid: String?): UserProfileEntity?

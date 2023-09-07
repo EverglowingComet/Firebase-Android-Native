@@ -1,5 +1,7 @@
 package com.comet.freetester.core.local
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.map
 import com.comet.freetester.core.local.dao.GalleryItemDao
 import com.comet.freetester.core.local.dao.UserProfileDao
 import com.comet.freetester.core.local.mapper.EntityToGalleryItemMapper
@@ -38,12 +40,16 @@ class LocalDataSourceImpl @Inject constructor(
         galleryItemDao.insertAll(items)
     }
 
-    override fun getUserProfile(uid: String): UserProfile? {
+    override fun getUserProfile(uid: String?): UserProfile? {
         return userProfileDao.getUserProfileByUid(uid)?.let { entityToProfileMapper.map(it) }
     }
 
-    override fun getUserProfileFlow(uid: String): Flow<UserProfile> {
-        return userProfileDao.getUserProfileFlowByUid(uid).map { entityToProfileMapper.map(it) }
+    override fun getUserProfileLiveData(uid: String?): LiveData<UserProfile?> {
+        return userProfileDao.getUserProfileFlowByUid(uid).map { entity ->
+            entity?.let {
+                entityToProfileMapper.map(entity)
+            }
+        }
     }
 
     override fun getGalleryItemById(id: String?): Flow<GalleryItem> {
