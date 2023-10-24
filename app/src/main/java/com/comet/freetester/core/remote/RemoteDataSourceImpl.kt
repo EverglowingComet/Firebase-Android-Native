@@ -14,6 +14,8 @@ class RemoteDataSourceImpl @Inject constructor(
     }
 
     override fun submitGallery(item: GalleryItem, callback: AsyncApiCallback) {
-        TODO("Not yet implemented")
+        val data: HashMap<String, Any> = HashMap()
+        data["galleryItem"] = item.dataMap
+        api.invokeApiCall("delivery-submitGallery", data, callback)
     }
 }
